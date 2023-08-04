@@ -47,7 +47,7 @@ video {
 .hero-image {
   width: 30%;
   height: 20%;
-  object-fit:cover;
+  object-fit: cover;
 }
 .hero-text-box {
   grid-column: 1 / -1;
@@ -70,10 +70,40 @@ video {
   font-weight: bold;
   text-transform: uppercase;
 }
+
+/* Portfolio Gallery Styles */
+
+.portfolio-contaier {
+  margin: 1rem auto 0 auto;
+}
+.portfolio-contaier h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 0.5rem;
+  grid-auto-rows: 300px;
+}
+.gallery-item {
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+.gallery-img {
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+}
+
+.gallery-img:hover {
+  transform: scale(1.5);
+}
 /* Add Media Queries for Large Screens */
 
 @media (min-width: 600px) {
-  .hero-heading{
+  .hero-heading {
     font-size: 4rem;
     line-height: 4rem;
   }
@@ -84,10 +114,21 @@ video {
   .hero-text-box {
     padding: 2rem;
   }
+  .portfolio-contaier h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }
 
 @media (min-width: 920px) {
-  .hero-heading{
+  .hero-heading {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  .portfolio-contaier {
+    max-width:1400px;
+  }
+  .portfolio-contaier h1 {
     font-size: 4rem;
     line-height: 4rem;
   }
