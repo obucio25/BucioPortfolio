@@ -4,15 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/glightbox.min.css" />
     <title>Omar's Portfolio Website</title>
   </head>
   <body>
     <!-- Begin Hero Header -->
     <header class="hero-box">
       <section class="hero-image-box">
-        <img class="hero-image" src="img/ObSelfie1.jpg" alt="Selfie of Omar" />
+        <img
+          class="hero-image1"
+          src="img/robin-schreiner-7y4858E8PfA-unsplash.jpg"
+          alt="background image"
+        />
       </section>
       <section class="hero-text-box">
+        <section>
+          <img class="hero-image" src="img/ObSelfie1.jpg" alt="ObSelfie1" />
+        </section>
         <h1 class="hero-heading">Welcome to Omar Bucio's Portfolio</h1>
         <p class="hero-text">
           Hello, I'm an aspiring front-end web developer currently a undergrad
@@ -24,8 +32,39 @@
     <!-- End Hero Header -->
 
     <!-- Begin Portfolio -->
-    
+    <section class="portfolio-contaier">
+      <h1>Portfolio</h1>
+      <section class="portfolio-gallery">
+        <div class="gallery-item">
+          <a href="img/ObSelfie2.jpg" class="glightbox">
+            <img
+              src="img/ObSelfie2.jpg"
+              alt="Omar's second selfie"
+              class="gallery-img"
+            />
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a
+            href="img/bernard-hermant-u7VDgNGb78w-unsplash.jpg"
+            class="glightbox"
+          >
+            <img
+              src="img/bernard-hermant-u7VDgNGb78w-unsplash.jpg"
+              alt="Random background image"
+              class="gallery-img"
+            />
+          </a>
+        </div>
+      </section>
+    </section>
     <!-- End Portfolio -->
+    <script>
+      src = "js/glightbox.min.js";
+    </script>
+    <script type="text/javascript">
+      const lightbox = GLightbox({ loop: true });
+    </script>
   </body>
 </html>
 <!DOCTYPE html>
