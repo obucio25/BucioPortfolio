@@ -5,7 +5,14 @@ html {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   height: 100%;
+  scroll-behavior: smooth;
 }
+@media(prefers-reduced-motion) {
+  html {
+    scroll-behavior:initial;
+  }
+}
+
 body {
   margin: 0 auto;
   padding: 0;
@@ -69,6 +76,26 @@ video {
   letter-spacing: 0.05rem;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.hero-button {
+  display: inline-block
+  padding: .75rem 2rem;
+  background: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
+.hero-button:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-button:active {
+  transform: scale(0.95);
 }
 
 /* Portfolio Gallery Styles */
