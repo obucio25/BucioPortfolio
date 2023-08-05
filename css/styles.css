@@ -65,12 +65,12 @@ video {
   z-index: 10;
 }
 .hero-text {
-  color: red;
+  color: rgb(107, 95, 95);
   font-size: 1rem;
   margin-top: 0.05rem;
 }
 .hero-heading {
-  color: lightskyblue;
+  color: black;
   font-size: 2rem;
   line-height: 2rem;
   letter-spacing: 0.05rem;
@@ -127,6 +127,39 @@ video {
 .gallery-img:hover {
   transform: scale(1.5);
 }
+
+/* About Styles */
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 1rem auto 0 auto;
+}
+
+.about-text {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-text h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.about-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-social {
+  display: flex;
+  justify-content: start;
+}
+
+.about-social a {
+  color: black;
+  padding: 0 1rem 1rem 1rem;
+}
 /* Add Media Queries for Large Screens */
 
 @media (min-width: 600px) {
@@ -141,9 +174,18 @@ video {
   .hero-text-box {
     padding: 2rem;
   }
-  .portfolio-contaier h1 {
+  .portfolio-contaier h1,
+  .about-text h1 {
     font-size: 3rem;
     line-height: 3rem;
+  }
+  .about-container {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -152,11 +194,17 @@ video {
     font-size: 4rem;
     line-height: 4rem;
   }
-  .portfolio-contaier {
+  .portfolio-contaier,
+  .about-container {
     max-width: 1400px;
   }
-  .portfolio-contaier h1 {
+  .portfolio-contaier h1,
+  .about-text h1 {
     font-size: 4rem;
     line-height: 4rem;
+  }
+  .about-text p {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
